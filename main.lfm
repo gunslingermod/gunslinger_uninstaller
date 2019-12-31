@@ -14042,6 +14042,7 @@ object MainForm: TMainForm
     Top = 296
     Width = 155
     Caption = 'btn_no'
+    OnClick = btn_noClick
     TabOrder = 1
   end
   object lbl_info: TLabel

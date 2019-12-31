@@ -17,6 +17,7 @@ type
     btn_no: TButton;
     Image1: TImage;
     lbl_info: TLabel;
+    procedure btn_noClick(Sender: TObject);
     procedure btn_yesClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
@@ -210,6 +211,11 @@ end;
 procedure TMainForm.btn_yesClick(Sender: TObject);
 begin
   RevertChanges(UNINSTALL_DATA_PATH);
+  Application.Terminate;
+end;
+
+procedure TMainForm.btn_noClick(Sender: TObject);
+begin
   Application.Terminate;
 end;
 
