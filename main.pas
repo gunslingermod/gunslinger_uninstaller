@@ -128,11 +128,11 @@ begin
   assignfile(f, batname);
   try
     rewrite(f);
-    writeln(f, 'chcp '+inttostr(GetACP())+' >nul');
+    writeln(f, 'chcp '+inttostr(GetACP())+' > nul');
     writeln(f, ':1');
     writeln(f, 'del "'+filename+'"');
     writeln(f, 'if exist "'+filename+'" goto 1');
-    writeln(f, 'del "'+batname+'"');
+    writeln(f, 'del "'+batname+'" && exit');
     closefile(f);
     result:=true;
   except
